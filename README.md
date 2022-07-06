@@ -1,2 +1,3 @@
 # scproject
-This is new version
+
+This is a Project SC Course
