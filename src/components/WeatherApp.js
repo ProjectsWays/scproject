@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import Loading from "../components/Loading";
-import WeatherForm from "../components/WeatherForm";
-import WeatherDetails from "../components/WeatherDetails";
-import WeatherMap from "../components/WeatherMap";
+import { useEffect, useState } from 'react';
+import Loading from '../components/Loading';
+import WeatherForm from '../components/WeatherForm';
+import WeatherDetails from '../components/WeatherDetails';
+import WeatherMap from '../components/WeatherMap';
 
 export default function WeatherApp() {
   const [weather, setWeather] = useState(null);
@@ -15,7 +15,7 @@ export default function WeatherApp() {
     document.title = `Weather | ${weather?.location.country}`;
   }, [weather]);
 
-  async function loadInfo(city = "Ecuador") {
+  async function loadInfo(city = '') {
     try {
       const data = await fetch(
         `${process.env.REACT_APP_URL}&key=${process.env.REACT_APP_KEY}&q=${city}`
