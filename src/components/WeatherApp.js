@@ -15,7 +15,7 @@ export default function WeatherApp() {
     document.title = `Weather | ${weather?.location.country}`;
   }, [weather]);
 
-  async function loadInfo(city) {
+  async function loadInfo(city="sulaymaniyah") {
     try {
       const data = await fetch(
         `${process.env.REACT_APP_URL}&key=${process.env.REACT_APP_KEY}&q=${city}`
